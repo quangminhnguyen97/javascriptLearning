@@ -1,28 +1,18 @@
-// function getTicketPrice(age) {
-//   // your code here
-//   if (age < 0 || age > 125) return -1
-  
-//   if (age < 6 || age > 70) return 0
-//   if (age > 12 ) return 50000
-//   return 20000
-// }
-
-// console.log(getTicketPrice(80));
-// console.log(getTicketPrice(18));
-// console.log(getTicketPrice(8));
-
-
-function sayHello(languageCode) {
-  // your code here ...
-  const lanMap = {
-      en: 'Hello',
-      vi: 'Xin chào',
-      fr: 'Bonjour',
-      cn: 'Nǐn hǎo',
-      ja: 'Konnichiwa',
-      ko: 'Anyoung haseyo'
+// using for...i
+function createArrayInRangeV1(a, b) {
+  // your code here
+  let result = [];
+  if ( a > b || a > 100 || a < -100 || b > 100 || b < -100) return undefined;
+  for (let i = a; i <=b; i++) {
+    result = [...result, i]
   }
-
-  return lanMap[languageCode] || 'Hello';
+  return result;
 }
 
+// using Array.from()
+function createArrayInRangeV2(a, b) {
+  if ( a > b || a > 100 || a < -100 || b > 100 || b < -100) return undefined;
+  return Array.from({ length: (b - a) / 1 + 1}, (_, i) => a + i);
+}
+
+console.log(createArrayInRangeV2(1,5))
