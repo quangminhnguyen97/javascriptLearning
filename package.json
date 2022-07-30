@@ -1,0 +1,14 @@
+{
+  "name": "javascriptLearning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/quangminhnguyen97/javascriptLearning.git",
+  "author": "Minh NQ <uocmoxavoi1102@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-jest": "^28.1.3",
+    "jest": "^28.1.3"
+  }
+}
