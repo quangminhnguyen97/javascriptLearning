@@ -5,6 +5,9 @@
   "repository": "https://github.com/quangminhnguyen97/javascriptLearning.git",
   "author": "Minh NQ <uocmoxavoi1102@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --coverage"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
