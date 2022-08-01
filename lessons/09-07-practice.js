@@ -1,6 +1,6 @@
 // Kiểm tra mảng có chứa tất cả số hoàn hảo không?
 // for...i: return false if found number is not perfect
-function isAllPerfectNumbersV1(numberList) {
+export function isAllPerfectNumbersV1(numberList) {
   // your code here
  if ( !Array.isArray(numberList) || !numberList.length ) return false
   function isPerfectNumber(n) {
@@ -23,7 +23,7 @@ function isAllPerfectNumbersV1(numberList) {
 
 // reduce: check if the number of perfect numbers is equal to length
 // optional: you can practice more to use forEach or filter :)
-function isAllPerfectNumbersV2(numberList) {
+export function isAllPerfectNumbersV2(numberList) {
   // your code here
  if ( !Array.isArray(numberList) || !numberList.length ) return false
   function isPerfectNumber(n) {
@@ -47,7 +47,7 @@ function isAllPerfectNumbersV2(numberList) {
 }
 
 // every
-function isAllPerfectNumbersV3(numberList) {
+export function isAllPerfectNumbersV3(numberList) {
   // your code here
  if ( !Array.isArray(numberList) || !numberList.length ) return false
   function isPerfectNumber(n) {
