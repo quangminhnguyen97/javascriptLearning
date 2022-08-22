@@ -32,7 +32,7 @@ function withdraw(amount) {
   }
 }
 
-console.log(withdraw(850000))  // --> { k500: 1, k200: 1, k100: 1, k50: 1 }
-console.log(withdraw(200000)) // --> { k500: 0, k200: 1, k100: 0, k50: 0}
-console.log(withdraw(125000)) // --> 'Invalid balance'
-console.log(withdraw(9000000)) // --> 'Insufficient balance from ATM'
+console.log(withdraw(7700000))  // --> { k500: 1, k200: 1, k100: 1, k50: 1 }
+// console.log(withdraw(200000)) // --> { k500: 0, k200: 1, k100: 0, k50: 0}
+// console.log(withdraw(125000)) // --> 'Invalid balance'
+// console.log(withdraw(9000000)) // --> 'Insufficient balance from ATM'
