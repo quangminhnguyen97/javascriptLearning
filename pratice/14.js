@@ -19,17 +19,20 @@ function findSumPair(numberList, targetSum) {
   if ( typeof targetSum !== 'number') return []
 
   let result = []
+  const tempNumberList = [...numberList]
   
-  numberList.forEach( (i, idx) => {
-    const val = i
-    numberList.splice(idx, 1)
-    if ( numberList.includes(targetSum - val) ) return result.push(val, targetSum - val)
-  })
-  return result.sort()
+  for (let i = 0; i <numberList.length; i++) {
+    const val = numberList[i]
+    const secondValue =  tempNumberList.filter((x, idx) => x === targetSum - val && idx !== i )
+    if ( secondValue.length ) {
+      return [...result, val, secondValue[0]]
+    }
+  }
+
+  return result.sort((a,b) => a-b)
 }
 
-console.log(findSumPair({})); // []
-console.log(findSumPair([], 10)); // []
+// console.log(findSumPair([3, 4, 3, 4, 2, 2], 5)); 
 console.log(findSumPair([1, 2], 2)); // [] vì không có 2 số nào có tổng bằng 2
-console.log(findSumPair([1 , 2, 3], 5)); // [2, 3] vì 2 + 3 = 5 và sắp xếp tăng dần nên có mảng [2, 3]
-console.log(findSumPair([0, 1], 1)); // [3, 3]
+console.log(findSumPair([1, 2, 3], 5)); // [2, 3] vì 2 + 3 = 5 và sắp xếp tăng dần nên có mảng [2, 3]
+// console.log(findSumPair([0, 1], 1));
